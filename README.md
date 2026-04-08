@@ -34,9 +34,9 @@ Recommended setup:
 
 1. Create a repository named `HugoKoubbi.github.io`
 2. Push this project to the `main` branch
-3. In GitHub, go to `Settings` -> `Actions` -> `General` and set workflow permissions to `Read and write`
-4. In `Settings` -> `Pages`, set the source to `Deploy from a branch` and select `gh-pages`
-5. Wait for the `Deploy site` GitHub Action to finish
+3. In GitHub, go to `Settings` -> `Actions` -> `General` and allow GitHub Actions to run
+4. In `Settings` -> `Pages`, set the source to `GitHub Actions`
+5. Push to `main` and wait for the `Deploy site` workflow to finish
 
 If you use a different repository name, update `url` and `baseurl` in `_config.yml`.
 
