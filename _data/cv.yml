@@ -1,0 +1,22 @@
+cv:
+  name: Hugo Koubbi
+  label: PhD Student in Mathematics
+  email: koubbi@ceremade.fr
+  location: Paris, France
+  image: ""
+  summary: Research in mathematics and applications to neural networks.
+
+  social_networks:
+    - network: GitHub
+      username: hugokoubbi
+
+  sections:
+    Education:
+      - institution: Universite Paris Dauphine - PSL
+        location: Paris, France
+        area: Mathematics
+        studyType: PhD
+        start_date: 2024
+        end_date: present
+        highlights:
+          - Thesis topic: Slow Motion in Machine Learning Landscapes
