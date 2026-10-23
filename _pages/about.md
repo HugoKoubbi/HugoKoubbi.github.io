@@ -34,3 +34,5 @@ My research lies in applied mathematics, at the interface of probability, mean-f
 Before starting my PhD, I obtained a Master’s degree in [Probability and Statistics](https://www.imo.universite-paris-saclay.fr/fr/etudiants/masters/mathematiques-et-applications/m2/mathematiques-de-laleatoire/) from Université Paris-Saclay. I also spent the academic year 2024–2025 at Yale University, under the supervision of [Theodor Misiakiewicz](https://misiakie.github.io/).
 
 You can also find me on [Google Scholar](https://scholar.google.com/citations?user=rp1SemcAAAAJ&hl=en).
+
+[Download my CV](/assets/pdf/Hugo_Koubbi_CV.pdf)
