@@ -1,0 +1,212 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[a4paper,top=1.5cm,bottom=1.5cm,left=1.55cm,right=1.55cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{etoolbox}
+\usepackage{needspace}
+\usepackage{fancyhdr}
+
+% Colors and links
+\definecolor{accent}{HTML}{1F4E79}
+\definecolor{textgray}{HTML}{404040}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  citecolor=accent,
+  pdfauthor={Hugo Koubbi},
+  pdftitle={Curriculum Vitae -- Hugo Koubbi},
+  pdfsubject={Research CV: neural-network scaling and learning dynamics},
+  pdfkeywords={machine learning, scaling limits, Transformers, statistical estimation}
+}
+\urlstyle{same}
+
+% Layout
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.2em}
+\setlength{\tabcolsep}{0pt}
+\renewcommand{\arraystretch}{1.06}
+\setlength{\emergencystretch}{1em}
+\raggedbottom
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\footnotesize\textcolor{textgray}{Hugo Koubbi}}
+\fancyfoot[R]{\footnotesize\textcolor{textgray}{\thepage}}
+\setlength{\footskip}{0.65cm}
+
+\titleformat{\section}
+  {\large\bfseries\color{accent}}
+  {}{0pt}{}[\vspace{-0.45em}\rule{\linewidth}{0.4pt}]
+\titlespacing*{\section}{0pt}{0.7em}{0.35em}
+
+\newcommand{\cvdate}[1]{\textcolor{textgray}{\small #1}}
+\newcommand{\cvauthorme}{\textbf{Hugo Koubbi}}
+\newcommand{\cvsection}[1]{\Needspace{4\baselineskip}\section{#1}}
+
+% Date | institution, role, and details. The fourth argument may be empty.
+\newcommand{\cventry}[4]{%
+  \par\noindent
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{3.0cm}@{\hspace{0.35cm}}>{\raggedright\arraybackslash}X@{}}
+    \cvdate{#1} & \textbf{#2}\newline
+      \emph{#3}\ifstrempty{#4}{}{\newline{\small #4}}
+  \end{tabularx}\par\vspace{0.22em}
+}
+
+% Publication: title | authors | venue/status | code link.
+% Always supply all four arguments; use {} when there is no code link.
+% The small font is scoped so subsequent titles retain their normal size.
+\newcommand{\cvpub}[4]{%
+  \item \begin{minipage}[t]{\linewidth}
+    \textbf{#1}\\[0.08em]
+    {\small #2. \textcolor{accent}{#3}.%
+      \ifstrempty{#4}{}{\par\vspace{0.1em}#4}}
+  \end{minipage}
+}
+
+\begin{document}
+
+% Verified Scholar and GitHub links; no placeholder website link.
+{\Huge\bfseries Hugo Koubbi}
+
+\vspace{0.25em}
+\textcolor{textgray}{Second-year PhD student in applied mathematics}\\
+\textcolor{textgray}{Universit\'e Paris-Dauphine PSL and Sorbonne Universit\'e}
+
+\vspace{0.3em}
+\textbf{Open to internship opportunities in applied mathematics, machine
+learning, and the scaling of deep-learning architectures.}
+
+\vspace{0.25em}
+\href{mailto:koubbihugo@gmail.com}{koubbihugo@gmail.com}\quad
+\textcolor{textgray}{|}\quad
+\href{https://scholar.google.com/citations?user=rp1SemcAAAAJ}{Google Scholar}\quad
+\textcolor{textgray}{|}\quad
+\href{https://github.com/HugoKoubbi}{GitHub}
+
+\vspace{0.25em}
+{\color{accent}\rule{\linewidth}{0.8pt}}
+
+\cvsection{Research Profile}
+PhD student studying \textbf{neural-network parameterization}, \textbf{scaling
+limits of Transformers}, and \textbf{learning dynamics}. I combine probability,
+dynamical systems, and machine-learning experiments to understand how deep
+models learn and how their representations evolve.
+
+\cvsection{Selected Publications and Preprints}
+\begin{enumerate}[leftmargin=1.5em,itemsep=0.4em,topsep=0.15em,parsep=0pt]
+  \cvpub{\href{https://arxiv.org/abs/2604.01978}{Homogenized Transformers}}
+    {\cvauthorme, Borjan Geshkovski, and Philippe Rigollet}
+    {arXiv preprint, 2026}
+    {}
+
+  \cvpub{\href{https://openreview.net/forum?id=qRPIWtf3SE}{Learning Single-Index Models via Harmonic Decomposition}}
+    {Nirmit Joshi, \cvauthorme, Theodor Misiakiewicz, and Nathan Srebro}
+    {NeurIPS 2025}
+    {}
+
+  \cvpub{\href{https://arxiv.org/abs/2402.15415}{Understanding Catastrophic Forgetting In LoRA via Mean-Field Attention Dynamics}}
+    {\cvauthorme, Louis Hernandez, and Matthieu Boussard}
+    {ICML 2026}
+    {\href{https://github.com/HugoKoubbi/Transformers-2024-LoRA}{Code}}
+
+  \cvpub{\href{https://arxiv.org/abs/2410.06833}{Dynamic metastability in the self-attention model}}
+    {Borjan Geshkovski, \cvauthorme, Yury Polyanskiy, and Philippe Rigollet}
+    {arXiv preprint, 2024}
+    {\href{https://github.com/HugoKoubbi/2024-transformers-dotm}{Code}}
+\end{enumerate}
+
+\cvsection{Research Experience}
+
+\cventry{Sept.~2025 -- present}
+  {Universit\'e Paris-Dauphine PSL and Sorbonne Universit\'e}
+  {PhD student in applied mathematics; expected completion: 2028}
+  {Research on scaling limits and training dynamics of deep Transformers.
+   Developing theoretical and computational approaches to study how learning
+   changes with model depth and size.}
+
+% Add model sizes, completed runs, and reusable tooling here only once confirmed.
+% The ongoing implementation work above is not presented as a completed release.
+
+\cventry{Sept.~2024 -- July~2025}
+  {Yale University, New Haven, USA}
+  {Visiting Assistant Researcher}
+  {Statistical estimation for single-index models using harmonic decomposition
+   (NeurIPS 2025).}
+
+\cventry{Mar.~2024 -- July~2024}
+  {Inria Paris, France}
+  {Research intern}
+  {Studied long-lived clustering dynamics in self-attention models.}
+
+\cventry{Sept.~2023 -- Mar.~2024}
+  {Craft AI, Paris, France}
+  {Research intern, industry}
+  {Studied catastrophic forgetting under LoRA using theory and experiments on
+   pretrained language models (ICML 2026).}
+
+\cventry{Apr.~2023 -- Aug.~2023}
+  {EPFL, Lausanne, Switzerland -- IdePHICS group}
+  {Research intern}
+  {Studied community detection with kernel side information using statistical
+   physics and graph-fused LASSO.}
+
+\cvsection{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}p{3.0cm}@{\hspace{0.35cm}}>{\raggedright\arraybackslash}X@{}}
+  \textbf{Programming} & Python, R \\
+  \textbf{ML frameworks} & PyTorch for model implementation, training, and
+      fine-tuning of Transformers, including LoRA and other adapters \\
+  \textbf{Scientific tools} & NumPy, SciPy, Matplotlib; numerical
+      optimization and PDE/ODE solvers \\
+  \textbf{Tools} & Git, \LaTeX
+\end{tabularx}
+
+\cvsection{Education}
+\cventry{2021 -- 2023}
+  {Universit\'e Paris-Saclay and ENS Paris-Saclay}
+  {M.Sc. in Probability Theory and Statistics -- highest honors}
+  {}
+
+\cventry{2020 -- 2021}
+  {\'Ecole Normale Sup\'erieure Paris-Saclay}
+  {B.Sc. in Mathematics -- highest honors}
+  {}
+
+\cventry{2018 -- 2020}
+  {Lyc\'ee du Parc, Lyon, France}
+  {Classes pr\'eparatoires MPSI--MP* (mathematics and physics)}
+  {}
+
+\cvsection{Teaching and Mentoring}
+\begin{tabularx}{\linewidth}{@{}p{3.0cm}@{\hspace{0.35cm}}>{\raggedright\arraybackslash}X@{}}
+  \cvdate{Since 2025} & \textbf{Teaching assistant, Universit\'e Paris-Dauphine PSL.}
+      Numerical optimization and differential calculus. \\[0.25em]
+  \cvdate{2026} & \textbf{M1 research project supervisor, Paris-Dauphine PSL.}
+      Supervised three master's students on scaling limits of Markov chains
+      and ballistic/diffusive limits of SGD. \\[0.25em]
+  \cvdate{2022 -- 2024} & \textbf{Oral examiner, classes pr\'eparatoires.}
+      Lyc\'ees Louis-le-Grand, Michelet, and Janson-de-Sailly. \\[0.25em]
+  \cvdate{Since 2021} & \textbf{Mathematics teacher, Admi-Univ.}
+      Undergraduate program, Paris.
+\end{tabularx}
+
+\cvsection{Awards}
+\begin{tabularx}{\linewidth}{@{}p{3.0cm}@{\hspace{0.35cm}}>{\raggedright\arraybackslash}X@{}}
+  \cvdate{2025 -- 2028} & \textbf{AI4IDF doctoral fellowship.}
+      Competitive PhD funding from the \^Ile-de-France AI cluster.
+\end{tabularx}
+
+\cvsection{Languages}
+French (native)\quad\textcolor{textgray}{|}\quad
+English (fluent)
+
+\end{document}

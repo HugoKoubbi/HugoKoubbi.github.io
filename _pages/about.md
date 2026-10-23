@@ -6,6 +6,8 @@ subtitle: PhD student in applied mathematics, with applications to neural networ
 
 profile:
   align: right
+  image: hugo-koubbi.jpg
+  image_circular: true
   more_info: >
     <p>CEREMADE, Universite Paris Dauphine - PSL</p>
     <p>Paris, France</p>
