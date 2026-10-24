@@ -29,7 +29,7 @@ latest_posts:
 
 I am a PhD student in mathematics, affiliated with [CEREMADE](https://www.ceremade.dauphine.fr/), [LJLL](https://www.ljll.fr/), and the Inria team [MEGAVOLT](https://www.inria.fr/fr/megavolt). I am supervised by [Borjan Geshkovski](https://borjang.github.io/) and [Antonin Chambolle](https://www.ceremade.dauphine.fr/~chambolle/).
 
-My research lies in applied mathematics, at the interface of probability, mean-field limits, and machine learning theory. I am particularly interested in the mathematical analysis of neural networks, with a focus on architectural aspects of modern machine learning models, especially Transformer architectures.
+My research lies in applied mathematics, at the interface of probability, mean-field limits, and machine learning theory. I am particularly interested in the mathematical analysis of neural networks, with a focus on architectural aspects, especially Transformer architectures.
 
 Before starting my PhD, I obtained a Master’s degree in [Probability and Statistics](https://www.imo.universite-paris-saclay.fr/fr/etudiants/masters/mathematiques-et-applications/m2/mathematiques-de-laleatoire/) from Université Paris-Saclay. I also spent the academic year 2024–2025 at Yale University, under the supervision of [Theodor Misiakiewicz](https://misiakie.github.io/).
 
